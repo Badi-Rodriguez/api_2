@@ -1,0 +1,26 @@
+POST http://localhost:3000/characters
+
+{
+  "name": "Throg",
+  "hp": 120,
+  "level": 10,
+  "experience": 5000,
+  "stats": {
+    "str": 15,
+    "dex": 10,
+    "con": 12,
+    "int": 8,
+    "wis": 11,
+    "cha": 9
+  },
+  "elementalAffinity": "Fire",
+  "inventory": [
+    [
+      {"name": "Iron Sword", "code": "item001"},
+      {"name": "Health Potion", "code": "item002"}
+    ],
+    [
+      {"name": "Mana Potion", "code": "item003"}
+    ]
+  ]
+}

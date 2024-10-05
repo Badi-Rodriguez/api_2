@@ -1,0 +1,4 @@
+mkdir game_character_api
+cd game_character_api
+npm init -y
+npm install express mongoose
