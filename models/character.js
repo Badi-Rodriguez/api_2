@@ -1,13 +1,14 @@
 const mongoose = require('mongoose');
 
+// Reference to the Item model with quantity
 const InventoryItemSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    code: { type: String, required: true }
+    itemCode: { type: String, required: true }, // Reference to the item code
+    quantity: { type: Number, default: 1 } // Quantity of the item in inventory
 });
 
 const CharacterSchema = new mongoose.Schema({
     name: { type: String, required: true },
-    hp: { type: Number, required: true },
+    hp: { type: Number, required: true, default: 100 },
     level: { type: Number, required: true },
     experience: { type: Number, required: true },
     stats: {
@@ -19,7 +20,9 @@ const CharacterSchema = new mongoose.Schema({
         cha: { type: Number, required: true }
     },
     elementalAffinity: { type: String, required: true },
-    inventory: [[InventoryItemSchema]]
+    inventory: [InventoryItemSchema] // Inventory contains itemCode and quantity
 });
 
 module.exports = mongoose.model('Character', CharacterSchema);
+
+

@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Character = require('../models/character');
+const Item = require('../models/item');
 
 // Create a new character
 router.post('/', async (req, res) => {
